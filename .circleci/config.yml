@@ -19,7 +19,7 @@
 # - for data that is specific to a build (commit), like the source code downloaded from github,
 #   we use Circle CI's workspace feature to transport it between jobs.
 
-version: 2.0
+version: 2.1
 
 workflows:
   version: 2
@@ -59,16 +59,21 @@ workflows:
           requires:
             - checkout
 
+orbs:
+  node: circleci/node@3.0.1
+
 jobs:
   checkout:
-    docker:
-      - image: circleci/node:12.18.0
+    executor:
+      name: node/default
+      tag: '12.18'
     working_directory: ~/pix
     steps:
       - checkout
+      - node/install-packages:
+          app-dir: ~/pix
       - run:
           command: |
-            npm ci
             npm run lint:scripts
             npm run test:scripts
             rm -rf .git/
