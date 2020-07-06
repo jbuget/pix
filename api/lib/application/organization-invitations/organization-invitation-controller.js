@@ -6,11 +6,11 @@ const organizationInvitationSerializer = require('../../infrastructure/serialize
 
 module.exports = {
 
-  async answerToOrganizationInvitation(request) {
+  async acceptOrganizationInvitation(request) {
     const organizationInvitationId = request.params.id;
-    const { code, status, email } = request.payload.data.attributes;
+    const { code, email } = request.payload.data.attributes;
 
-    await usecases.answerToOrganizationInvitation({ organizationInvitationId, code, status, email });
+    await usecases.answerToOrganizationInvitation({ organizationInvitationId, code, email });
     return null;
   },
 
