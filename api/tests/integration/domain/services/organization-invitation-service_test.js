@@ -41,7 +41,7 @@ describe('Integration | Service | Organization-Invitation Service', () => {
 
       // then
       expect(result).to.be.instanceOf(OrganizationInvitation);
-      expect(_.omit(result, ['id', 'code', 'organizationName', 'createdAt', 'updatedAt'])).to.deep.equal(expectedOrganizationInvitation);
+      expect(_.omit(result, ['id', 'code', 'organizationName', 'role', 'createdAt', 'updatedAt'])).to.deep.equal(expectedOrganizationInvitation);
     });
 
     it('should re-send an email with same code when organization-invitation already exist with status pending', async () => {

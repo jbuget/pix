@@ -12,6 +12,7 @@ class OrganizationInvitation {
     status,
     code,
     organizationName,
+    role,
     createdAt,
     updatedAt,
     //references
@@ -23,6 +24,7 @@ class OrganizationInvitation {
     this.status = status;
     this.code = code;
     this.organizationName = organizationName;
+    this.role = role;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
     //references

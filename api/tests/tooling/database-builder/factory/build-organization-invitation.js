@@ -11,6 +11,7 @@ module.exports = function buildOrganizationInvitation(
     email,
     status = OrganizationInvitation.StatusType.PENDING,
     code = faker.random.alphaNumeric(10).toUpperCase(),
+    role = null,
     updatedAt = new Date(),
   } = {}) {
 
@@ -23,6 +24,7 @@ module.exports = function buildOrganizationInvitation(
     email,
     status,
     code,
+    role,
     createdAt: new Date(),
     updatedAt,
   };
