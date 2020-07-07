@@ -12,6 +12,27 @@ module.exports = function organizationsBuilder({ databaseBuilder }) {
     organizationId: 2,
     organizationRole: Membership.roles.ADMIN,
   });
+  databaseBuilder.factory.buildSchoolingRegistration({
+    firstName: 'Joffrey',
+    lastName: 'Baratheon',
+    birthdate: '2000-02-28',
+    organizationId: 2,
+    userId: null
+  });
+  const sansaStark = databaseBuilder.factory.buildUser.withUnencryptedPassword({
+    firstName: 'Sansa',
+    lastName: 'Stark',
+    email: 'sansa.stark@example.net',
+    rawPassword: 'Pix123',
+    cgu: false
+  });
+  databaseBuilder.factory.buildSchoolingRegistration({
+    firstName: sansaStark.firstName,
+    lastName: sansaStark.lastName,
+    birthdate: '2000-05-28',
+    organizationId: 2,
+    userId: sansaStark.id
+  });
   databaseBuilder.factory.buildOrganization({
     id: 3,
     type: 'SCO',
@@ -97,5 +118,4 @@ module.exports = function organizationsBuilder({ databaseBuilder }) {
     birthdate: '2003-09-30',
     organizationId: 3,
   });
-
 };
