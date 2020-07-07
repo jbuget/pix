@@ -1,0 +1,33 @@
+log_format  keyvalue  'method=$request_method path="$uri" host=$host request_id=$request_id from="$remote_addr" protocol=$scheme status=$status duration=$request_time bytes=$bytes_sent referer="$http_referer" user_agent="$http_user_agent"';
+
+server {
+        server_name localhost;
+        listen <%= ENV['PORT'] %>;
+
+        charset utf-8;
+        gzip off;
+
+        location ~ ^/(?<app>[^/]+)/.*$ {
+          access_log /dev/stdout keyvalue;
+
+          root /app/dist/;
+
+          try_files $uri /$app/index.html =404;
+
+          expires -1;
+        }
+
+        add_header X-Content-Type-Options "nosniff";
+        add_header X-Frame-Options "SAMEORIGIN";
+        add_header X-XSS-Protection 1;
+
+        <% ENV.each do |key,value| %>
+          <% if key.start_with? 'ADD_HTTP_HEADER' %>
+            add_header <%=
+                key.sub(/^ADD_HTTP_HEADER_/, '').split("_").map(&:capitalize).join("-")
+              %> "<%=
+                value.gsub('\\', '\\\\\\\\').gsub('"','\\"').gsub('$','\\$')
+              %>" ;
+          <% end %>
+        <% end %>
+    }
