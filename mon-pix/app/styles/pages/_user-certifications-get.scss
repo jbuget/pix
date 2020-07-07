@@ -1,17 +1,11 @@
 .user-certifications-page-get {
   position: relative;
 
-  .link__return-to {
+  .link-back {
     top: calc(-0.813rem - 20px);
     position: absolute;
     margin-left: -6px;
     align-self: start;
-    color: $white;
-
-    .icon-button {
-      margin-right: 0;
-      color: $white;
-    }
   }
 
   &--over-background-banner {
