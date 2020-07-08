@@ -23,6 +23,29 @@
     "bad-request-error": "The information input is not in the correct format.",
     "internal-server-error": "The service is temporarily unavailable. Please try again later."
   },
+
+  "certifications-list": {
+    "title": "Lorem ipsum",
+    "table-header": {
+      "date": "Lorem ipsum",
+      "status": "Lorem ipsum",
+      "score": "Lorem ipsum",
+      "certification-center": "Lorem ipsum"
+    },
+    "table-row": {
+      "certif-success": {
+        "status": "Lorem ipsum",
+        "detail": "Lorem ipsum"
+      },
+      "certif-fail": {
+        "status": "Lorem ipsum",
+        "detail": "Lorem ipsum"
+      },
+      "certif-not-publish": {
+        "status": "Lorem ipsum"
+      }
+    }
+  },
   "signin-form": {
     "actions": {
       "submit": "Sign in"

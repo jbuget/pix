@@ -25,6 +25,29 @@
     "internal-server-error": "Une erreur interne est survenue, nos équipes sont en train de résoudre le problème. Veuillez réessayer ultérieurement."
   },
 
+  "certifications-list": {
+    "title": "Mes Certifications",
+    "table-header": {
+      "date": "date",
+      "status": "statut",
+      "score": "score-pix",
+      "certification-center": "centre de certification"
+    },
+    "table-row": {
+      "certif-success": {
+        "status": "Certification obtenue",
+        "detail": "voir les résultats"
+      },
+      "certif-fail": {
+        "status": "Certification non obtenue",
+        "detail": "détail"
+      },
+      "certif-not-publish": {
+        "status": "En attente du résultat"
+      }
+    }
+  },
+
   "signin-form": {
     "actions": {
       "submit": "Je me connecte"
