@@ -3,10 +3,12 @@ import { beforeEach, describe, it } from 'mocha';
 import { setupRenderingTest } from 'ember-mocha';
 import { click, find, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
+import setupIntl from '../../helpers/setup-intl';
 
 describe('Integration | Component | Challenge Embed Simulator', function() {
 
   setupRenderingTest();
+  setupIntl();
 
   describe('Acknowledgment overlay', function() {
 

@@ -45,6 +45,31 @@
     }
   },
 
+  "challenge-actions": {
+    "already-answered": "You already answered that question",
+    "continue": "Proceed",
+    "validate": "Validate",
+    "skip": "Skip"
+  },
+
+  "challenge-embed": {
+    "launch-button": "Start the application",
+    "reboot": " Reset "
+  },
+
+  "challenge-statement": {
+    "download": "Télécharger",
+    "text-content": "Choisissez le type de fichier que vous voulez utiliser",
+    "help": "Pix vous laisse le choix du format de fichier à télécharger. Si vous ne savez pas quelle option retenir, conservez le choix par défaut. Il correspond au format de fichier pris en charge par le plus grand nombre de logiciels.",
+    "file-option-label": "fichier .",
+    "action-label": "Télécharger"
+  },
+
+  "progress-bar": {
+    "question": "Question"
+  },
+
+
   "signin-form": {
     "actions": {
       "submit": "Sign in"

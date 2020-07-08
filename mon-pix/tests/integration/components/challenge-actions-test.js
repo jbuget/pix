@@ -4,6 +4,7 @@ import { describe, it } from 'mocha';
 import { setupRenderingTest } from 'ember-mocha';
 import { click, find, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
+import setupIntl from '../../helpers/setup-intl';
 
 const VALIDATE_BUTTON = '.challenge-actions__action-validate';
 const SKIP_BUTTON = '.challenge-actions__action-skip';
@@ -11,6 +12,7 @@ const SKIP_BUTTON = '.challenge-actions__action-skip';
 describe('Integration | Component | challenge actions', function() {
 
   setupRenderingTest();
+  setupIntl();
 
   it('renders', async function() {
     await render(hbs`{{challenge-actions}}`);

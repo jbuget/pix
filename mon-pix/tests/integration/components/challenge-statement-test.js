@@ -4,10 +4,12 @@ import { setupRenderingTest } from 'ember-mocha';
 import { find, findAll, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import sinon from 'sinon';
+import setupIntl from '../../helpers/setup-intl';
 
 describe('Integration | Component | ChallengeStatement', function() {
 
   setupRenderingTest();
+  setupIntl();
 
   function addChallengeToContext(component, challenge) {
     component.set('challenge', challenge);
