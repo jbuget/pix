@@ -25,6 +25,10 @@
     "internal-server-error": "Une erreur interne est survenue, nos équipes sont en train de résoudre le problème. Veuillez réessayer ultérieurement."
   },
 
+  "certification-banner": {
+    "number-label": "N° de certification"
+  },
+
   "certification-joiner": {
     "congratulation-banner": {
       "congrats": "Bravo ",

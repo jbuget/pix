@@ -24,6 +24,10 @@
     "internal-server-error": "The service is temporarily unavailable. Please try again later."
   },
 
+  "certification-banner": {
+    "number-label": "Certification N°"
+  },
+
   "certification-joiner": {
     "congratulation-banner": {
       "congrats": "Congratulations ",
