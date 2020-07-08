@@ -36,7 +36,15 @@
     "hexagon": {
       "pix": "PIX",
       "certified": "Lorem ipsum"
-    }
+    },
+    "competences": {
+      "title": "Lorem ipsum",
+      "sub-title": "Lorem ipsum",
+      "level": "Lorem ipsum",
+      "informations": "Lorem ipsum"
+    },
+    "jury-title": "Lorem ipsum",
+    "clea-title": "Lorem ipsum"
   },
 
   "certifications-list": {
