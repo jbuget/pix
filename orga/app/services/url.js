@@ -12,4 +12,9 @@ export default class Url extends Service {
       this.definedCampaignsRootUrl :
       `${this.pixAppUrlWithoutExtension}${this.currentDomain.getExtension()}/campagnes/`;
   }
+
+  get homeUrl() {
+    return ENV.rootURL;
+  }
+
 }
