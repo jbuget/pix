@@ -25,6 +25,19 @@
     "internal-server-error": "Une erreur interne est survenue, nos équipes sont en train de résoudre le problème. Veuillez réessayer ultérieurement."
   },
 
+  "certification-joiner": {
+    "title": "Rejoindre une session",
+    "form": {
+      "action": {
+        "submit": "Continuer"
+      },
+      "session-number-label": "Numéro de session",
+      "first-name-label": "Prénom",
+      "birth-name-label": "Nom de naissance",
+      "birth-date-label": "Date de naissance"
+    }
+  },
+
   "signin-form": {
     "actions": {
       "submit": "Je me connecte"

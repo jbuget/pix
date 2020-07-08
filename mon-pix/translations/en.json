@@ -23,6 +23,20 @@
     "bad-request-error": "The information input is not in the correct format.",
     "internal-server-error": "The service is temporarily unavailable. Please try again later."
   },
+
+  "certification-joiner": {
+    "title": "Join a session",
+    "form": {
+      "action": {
+        "submit": "Continue"
+      },
+      "session-number-label": "Session number",
+      "first-name-label": "Firstname",
+      "birth-name-label": "Birth name",
+      "birth-date-label": "Birth date"
+    }
+  },
+
   "signin-form": {
     "actions": {
       "submit": "Sign in"
