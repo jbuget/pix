@@ -25,6 +25,10 @@
   },
 
   "certification-joiner": {
+    "congratulation-banner": {
+      "congrats": "Congratulations ",
+      "profile": "your profile is certifiable."
+    },
     "title": "Join a session",
     "form": {
       "action": {
