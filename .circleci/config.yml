@@ -258,6 +258,18 @@ jobs:
           command: npm ci
 
       - run:
+          working_directory: ~/pix/admin
+          command: cat package*.json > cachekey
+      - restore_cache:
+          keys:
+            - v7-admin-npm-{{ checksum "~/pix/admin/cachekey" }}
+      - run:
+          environment:
+            JOBS: 2
+          working_directory: ~/pix/admin
+          command: npm ci
+
+      - run:
           working_directory: ~/pix/api
           environment:
             DATABASE_URL: 'postgres://circleci@localhost:5432/circleci'
@@ -286,10 +298,19 @@ jobs:
           command: npm start
 
       - run:
+          working_directory: ~/pix/admin
+          environment:
+            JOBS: 1
+          background: true
+          command: npm start
+
+      - run:
           environment:
             DATABASE_URL: 'postgres://circleci@localhost:5432/circleci'
           command: |
             wget --retry-connrefused -T 60 -qO- http://localhost:4200
             wget --retry-connrefused -T 60 -qO- http://localhost:4201
+            wget --retry-connrefused -T 60 -qO- http://localhost:4202
+            wget --retry-connrefused -T 60 -qO- http://localhost:4203
             wget --retry-connrefused -T 60 -qO- http://localhost:3000/api
             npm run cy:run:ci
